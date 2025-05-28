@@ -427,7 +427,6 @@ section {
     transform: translateY(0);
 }
 
-
 .portfolio-title {
     font-weight: 500;
     font-size: 20px;
@@ -451,7 +450,6 @@ section {
     padding-bottom: 100px;
 }
 
-
 .footer-container {
     display: flex;
     align-items: baseline;
@@ -459,7 +457,6 @@ section {
     margin: 0 auto;
     padding: 0 15px;
 }
-
 
 .footer-left {
     max-width: 264px;
@@ -505,7 +502,6 @@ section {
     margin-bottom: 16px;
 }
 
-
 .footer-social-list {
     display: flex;
     gap: 16px;
@@ -513,7 +509,6 @@ section {
     margin: 0;
     list-style: none;
 }
-
 
 .footer-social-link {
     width: 40px;
