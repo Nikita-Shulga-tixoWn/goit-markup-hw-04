@@ -39,6 +39,10 @@ a {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow:
+        0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .visually-hidden {
@@ -104,6 +108,7 @@ section {
     padding: 24px 0;
     display: block;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
@@ -115,11 +120,11 @@ section {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
     height: 4px;
     width: 100%;
     background-color: #404bbf;
     border-radius: 2px;
+    bottom: -1px;
 }
 
 .nav-link:hover,
@@ -143,6 +148,7 @@ section {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -155,14 +161,16 @@ section {
     color: #ffffff;
     padding: 188px 0;
     text-align: center;
-    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/people-office.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.hero-section.container {
+.hero-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,6 +202,7 @@ section {
     padding: 16px 32px;
     border: none;
     height: 56px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -222,11 +231,6 @@ section {
     height: 112px;
     background: #f4f4fd;
     margin-bottom: 8px;
-}
-
-.icon {
-    width: 64px;
-    height: 64px;
 }
 
 .features-item {
@@ -268,25 +272,34 @@ section {
     justify-content: center;
     gap: 24px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .team-links {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     margin-top: 8px;
+}
+
+.team-link-item {
+    width: 40px;
+    height: 40px;
 }
 
 .links {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links:hover,
@@ -312,16 +325,16 @@ section {
 
 .team-item {
     background-color: #ffffff;
-    border-radius: 0 0 4px 4px;
-    text-align: center;
+    border-radius: 0px 0px 4px 4px;
     box-shadow:
-        0 2px 1px 0 rgba(46, 47, 66, 0.08),
-        0 1px 1px 0 rgba(46, 47, 66, 0.16),
-        0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    text-align: center;
 }
 
 .team-info {
-    padding: 32px 16px;
+    padding: 32px 0px;
     text-align: center;
 }
 
@@ -440,7 +453,8 @@ section {
 
 
 .footer-container {
-    position: relative;
+    display: flex;
+    align-items: baseline;
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
@@ -448,8 +462,8 @@ section {
 
 
 .footer-left {
-    position: relative;
     max-width: 264px;
+    margin-right: 120px;
 }
 
 .footer .logo-foot {
@@ -468,7 +482,6 @@ section {
     color: #f4f4fd;
 }
 
-
 .footer-text {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -477,13 +490,11 @@ section {
     color: #f4f4fd;
 }
 
-/* Правая часть футера: Социальные сети */
 .footer-social {
-    position: absolute;
-    top: 0;
-    left: calc(264px + 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
 
 .footer-social-title {
     font-weight: 500;
@@ -512,7 +523,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms ease;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
